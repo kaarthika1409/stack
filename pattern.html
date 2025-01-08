@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Display</title>
+</head>
+<body>
+    <div id="pattern"></div>
+    <script>
+        const n = 5; 
+        const p = document.getElementById("pattern"); 
+        let pHTML = ""; 
+
+        for (let i = 1; i <= n; i++) {
+            pHTML += "*".repeat(i) + "<br>"; 
+        }
+
+        p.innerHTML = pHTML; 
+    </script>
+</body>
+</html>
