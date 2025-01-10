@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizable Image</title>
+    <style>
+        .resizable-container {
+            display: inline-block;
+            position: relative;
+            resize: both; 
+            overflow: hidden; 
+            border: 2px  #888;
+            min-width: 100px;
+            min-height: 100px;
+            max-width: 100%; 
+            max-height: 100vh;
+        }
+
+        .resizable-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+        }
+    </style>
+</head>
+<body>
+    <div class="resizable-container">
+        <img src="https://i.pinimg.com/236x/df/5c/12/df5c1268c9f246864225206b99c6d1b4.jpg" alt="Resizable Image">
+    </div>
+</body>
+</html>
