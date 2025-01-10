@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1>one</h1>
+        <h1>Two</h1>
+        <h1>Third</h1>
+        <h1>Four</h1>
+        <h1>Five</h1>
+        <input type="hidden" value="123" />
+        <script>
+            var tags =document.getElementsByTagName("h1");
+            for(i=0;i<tags.length;i++){
+                console.log(tags[i].innerHTML)
+            }
+            tags=document.getElementsByTagName("input");
+            console.log(tags[0].value);
+        </script>
+    </body>
+</html>
