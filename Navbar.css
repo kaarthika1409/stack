@@ -1,0 +1,20 @@
+ol{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+    margin:0;
+    padding: 0;
+    background-color: lightblue;
+
+}
+.link{
+    text-decoration: brown;
+    color: #0a33e9;
+}
+.link:hover{
+    background-color: blueviolet;
+    color: chartreuse;
+    border-radius: 10px;
+    padding: auto;
+}
