@@ -1,6 +1,9 @@
 import { useEffect ,useState} from "react";
 const UseEffect=()=>{
     var [text,setText]=useState("");
+    useEffect(()=>{
+        console.log(text);
+    },[text])
     return (
         <div>
             <h2>This is UseEffect example</h2>
@@ -9,4 +12,4 @@ const UseEffect=()=>{
         </div>
     )
 }
-export default UseEffect;
+export default UseEffect;
