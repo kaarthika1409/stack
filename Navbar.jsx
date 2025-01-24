@@ -3,9 +3,9 @@ import '../../css/Navbar.css'
 import { useState } from 'react'
 const Navbar = (onLogout) => {
     var [dropdown, showDropdown] = useState(false)
-    const toggleDropdown=()=>{
-    showDropdown(dropdown=> !dropdown)
-    }
+    //const toggleDropdown=()=>{
+    // showDropdown(dropdown=> !dropdown)
+    //}
     return (<header>
         <nav>
             <ol>
@@ -14,20 +14,23 @@ const Navbar = (onLogout) => {
                 <li><Link to='/About' className="link">About</Link></li>
                 <li><Link to='/Gallery' className="link" >Gallery</Link></li>
                 <li><Link to='/Contact' className="link">Contact</Link></li>
-                <div onMouseEnter={() => { toggleDropdown }} onMouseLeav={() => { toggleDropdown }}>
-                    <span >Hooks</span>
+                <div>
+                    <span onMouseEnter={() => { showDropdown(true) }} onMouseLeav={() => { showDropdown(false) }}>Hooks</span>
                     {dropdown &&
                         (
                             <ul>
-                                { <li><Link to='/useState' target='_blank'>useState</Link></li> }
-                                {<li><Link to='/useEffect' target='_blank'>useEffect</Link></li>}
+                                  { <li><Link to='/react-lm'>React-LifeCycle</Link></li> }
+                                { <li><Link to='/useState'>useState</Link></li> }
+                                {<li><Link to='/useEffect'>useEffect</Link></li>}
+                                {<li><Link to='/useEffectAPI' >useEffectAPI</Link></li>}
+                                {<li><Link to='/use-ref' >useRef</Link></li>}
+                                {<li><Link to='/use-memo' >useMemo</Link></li>}
+                                {<li><Link to='/use-callback' >usecallback</Link></li>}
                             </ul>
                         )
                     }
                 </div>
-                <li><Link to='/UseState' class="link">UseState</Link></li>
-                <li><Link to='/UseEffect' class="link">UseEffect</Link></li>
-                <li><Link to='/UseEffectAPI' class="link">UseEffectAPI</Link></li>
+                
                 <li><Link to='/UseEffectImageAPI' class="link">UseEffectImageAPI</Link></li>
                 <li><Link to='/' className="link" onClick={onLogout}>Logout</Link></li>
             </ol>
@@ -35,4 +38,4 @@ const Navbar = (onLogout) => {
     </header>)
 
 }
-export default Navbar;
+export default Navbar;
