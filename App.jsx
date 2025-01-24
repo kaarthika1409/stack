@@ -16,6 +16,8 @@ import { useState } from "react";
 import UseMemo from "./components/FunctionalComponents/Hooks/UseMemo"
 import UseCallback from "./components/FunctionalComponents/Hooks/UseCallback"
 import ReactLifecycleMethods from "./components/classComponents/ReactLifecycleMethods"
+import UseContext from "./components/FunctionalComponents/Hooks/UseContext"
+import Memo from "./components/FunctionalComponents/Memoization/Memo"
 
 
 function App() {
@@ -56,6 +58,9 @@ function App() {
             <Route path="/use-ref" element={<UseRef/>}></Route>
             <Route path="/use-memo" element={<UseMemo/>}></Route>
             <Route path="/use-callback" element={<UseCallback/>}></Route>
+            <Route path="/use-context" element={<UseContext/>}></Route>
+            <Route path="/memo" element={<Memo/>}></Route>
+           
         
           </Routes>
         </>
